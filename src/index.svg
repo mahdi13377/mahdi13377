@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <foreignObject width="100%" height="1100px">
+        <style>
+            body {
+                background: #0c0d13;
+                background: radial-gradient(ellipse at bottom, #0c1929 0%, #0c0d13 100%);
+                height: calc(100% - 2px);
+                width: calc(100% - 2px);
+                margin: 0;
+                border: #6c7480 1px solid;
+                border-radius: 16px;
+                color: white;
+                font-family: Trebuchet MS, Helvetica, Arial, sans-serif;
+            }
+
+
+            main {
+                padding: 16px;
+            }
+
+            hr {
+                border: none;
+                border-bottom: #797f8a 2px solid;
+            }
+
+            .background,
+            .background .stars,
+            main {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+
+            .background {
+                opacity: 0.7;
+            }
+
+            .background .stars {
+                rotate: -30deg;
+                left: -25%;
+                right: -25%;
+                color: #4ec0e9;
+            }
+
+            @keyframes shooting-star {
+                0% {
+                    left: 100%;
+                    opacity: 0;
+                }
+
+                10% {
+                    opacity: var(--a);
+                }
+
+                90% {
+                    opacity: var(--a);
+                }
+
+                100% {
+                    left: 0%;
+                    opacity: 0;
+                }
+            }
+
+            .background .shooting-star {
+                position: absolute;
+                top: var(--p);
+                left: 100%;
+                width: var(--l);
+                height: 2px;
+                background: linear-gradient(90deg, currentColor 0%, #4ec0e900 100%);
+                filter: drop-shadow(0 0 6px currentColor);
+                opacity: 0;
+                animation: shooting-star 5s ease-in infinite;
+                animation-delay: var(--o);
+                animation-duration: var(--d);
+            }
+
+            .background .shooting-star::before,
+            .background .shooting-star::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: calc(-25px * var(--a) * var(--s));
+                right: 0;
+                bottom: 0;
+                width: calc(50px * var(--a) * var(--s));
+                height: 2px;
+                border-radius: 100%;
+                background: linear-gradient(90deg, transparent, currentColor, transparent);
+            }
+
+            .background .shooting-star::before {
+                rotate: 30deg;
+
+            }
+
+            .background .shooting-star::after {
+                rotate: -60deg;
+            }
+
+            .header {
+                padding: 64px 0 48px 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .header h1 {
+                margin-top: 8px;
+                margin-bottom: -8px;
+            }
+
+            .header p {
+                color: #fffb;
+                font-size: small;
+            }
+
+            .header img {
+                border: #d1d5db 4px solid;
+                border-radius: 69420px;
+            }
+
+            .main-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: stretch;
+                margin: auto;
+                max-width: 640px;
+            }
+
+            .cards {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px
+            }
+
+            .card {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                width: calc(50% - 40px);
+                background: #fff1;
+                border: #fff1 1px solid;
+                border-radius: 16px;
+                padding: 16px;
+            }
+
+            @media (max-width: 512px) {
+                .cards {
+                    flex-direction: column;
+                }
+
+                .card {
+                    width: calc(100% - 32px);
+                }
+            }
+
+            .card img {
+                border-radius: 69420px;
+            }
+
+            .card p {
+                margin: 0;
+                font-size: medium;
+                color: white;
+            }
+
+            .card .text {
+                font-size: small;
+                color: #fffb;
+            }
+        </style>
+
+        <body xmlns="http://www.w3.org/1999/xhtml">
+            <div class="background">
+                <div class="stars">
+                    <div class="shooting-star" style="--o:0.01s; --d:2.11s; --a:0.4; --p:45.04%; --l:4.5%; --s:.45" />
+                    <div class="shooting-star" style="--o:0.01s; --d:3.11s; --a:0.4; --p:84.49%; --l:5.5%; --s:.55" />
+                    <div class="shooting-star" style="--o:0.01s; --d:4.11s; --a:0.6; --p:56.64%; --l:6.0%; --s:.60" />
+                    <div class="shooting-star" style="--o:0.01s; --d:2.11s; --a:0.6; --p:38.84%; --l:6.5%; --s:.65" />
+                    <div class="shooting-star" style="--o:0.01s; --d:7.11s; --a:0.7; --p:00.00%; --l:7.0%; --s:.70" />
+                    <div class="shooting-star" style="--o:0.01s; --d:6.11s; --a:0.7; --p:14.84%; --l:7.5%; --s:.75" />
+                    <div class="shooting-star" style="--o:0.01s; --d:3.11s; --a:0.8; --p:59.27%; --l:8.0%; --s:.80" />
+                    <div class="shooting-star" style="--o:0.01s; --d:1.11s; --a:0.8; --p:71.18%; --l:8.5%; --s:.85" />
+                    <div class="shooting-star" style="--o:0.01s; --d:4.11s; --a:0.9; --p:23.53%; --l:9.0%; --s:.90" />
+                    <div class="shooting-star" style="--o:0.01s; --d:2.11s; --a:1.0; --p:98.35%; --l:9.9%; --s:.99" />
+                    <div class="shooting-star" style="--o:0.01s; --d:2.611s; --a:1.4; --p:42.04%; --l:2.5%; --s:.42" />
+                    <div class="shooting-star" style="--o:0.01s; --d:5.111s; --a:2.4; --p:83.49%; --l:5.5%; --s:.51" />
+                    <div class="shooting-star" style="--o:0.01s; --d:1.211s; --a:1.6; --p:51.64%; --l:7.0%; --s:.20" />
+                    <div class="shooting-star" style="--o:0.01s; --d:2.511s; --a:4.6; --p:32.84%; --l:8.5%; --s:.45" />
+                    <div class="shooting-star" style="--o:0.01s; --d:5.2311s; --a:0.7; --p:00.00%; --l:1.0%; --s:.50" />
+                    <div class="shooting-star" style="--o:0.01s; --d:4.111s; --a:0.7; --p:14.84%; --l:5.5%; --s:.25" />
+                    <div class="shooting-star" style="--o:0.01s; --d:7.111s; --a:0.8; --p:59.27%; --l:2.0%; --s:.10" />
+                    <div class="shooting-star" style="--o:0.01s; --d:3.121s; --a:0.8; --p:71.18%; --l:4.5%; --s:.65" />
+                    <div class="shooting-star" style="--o:0.01s; --d:4.131s; --a:0.9; --p:23.53%; --l:5.0%; --s:.70" />
+                    <div class="shooting-star" style="--o:0.01s; --d:8.21s; --a:1.0; --p:98.35%; --l:9.9%; --s:.49" />
+                </div>
+            </div>
+            <main>
+                <div class="header">
+                    <h1>mahdi</h1>
+                    <p>1337</p>
+                </div>
+                <hr />
+                <div class="main-content">
+                    <h2>About me</h2>
+                    <p>
+                        I know these programming languages:
+                    <ul>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    </p>
+                    <p>
+                        credits to ItsPi3141 for cool readme.md
+                    </p>
+                </div>
+            </main>
+        </body>
+    </foreignObject>
+</svg>
